@@ -86,14 +86,14 @@ docker compose logs -f
 ### 3. Health check
 
 ```bash
-curl http://localhost:8180/health
+curl http://localhost:8179/health
 # {"status":"ok"}
 ```
 
 ### 4. Smoke test (generate audio)
 
 ```bash
-curl -X POST http://localhost:8180/tts \
+curl -X POST http://localhost:8179/tts \
   -H 'Content-Type: application/json' \
   -d '{"text":"Hello, how was your day?"}' \
   --output out.wav
@@ -139,7 +139,7 @@ Edit the `environment` section in `docker-compose.yml`:
 | `KOKORO_LANG`       | `en-us`                  | `en-us`, `en-gb`, ... |
 | `KOKORO_SPEED`      | `1.0`                    | 0.5–2.0 |
 | `KOKORO_THREADS`    | `4`                      | match CPU core count (sets `OMP_NUM_THREADS`) |
-| `KOKORO_PORT`       | `8180`                   | any free port |
+| `KOKORO_PORT`       | `8179`                   | any free port |
 
 ### Model precision
 
@@ -167,7 +167,7 @@ bottom of `docker-compose.yml` to `external: true` with your network's name.
 Then reach the server by container name:
 
 ```env
-KOKORO_URL=http://kokoro-server:8180
+KOKORO_URL=http://kokoro-server:8179
 ```
 
 ## Troubleshooting

@@ -6,7 +6,7 @@ Uses only the Python standard library, so it runs anywhere (host or container)
 without installing anything.
 
 Usage:
-    python bench.py [--url http://localhost:8180] [--runs 5]
+    python bench.py [--url http://localhost:8179] [--runs 5]
 
 Tip: run `docker stats kokoro-server whisper-server` in another terminal while
 this runs to capture peak RAM of both services side by side.
@@ -55,7 +55,7 @@ def p95(values):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--url", default="http://localhost:8180")
+    ap.add_argument("--url", default="http://localhost:8179")
     ap.add_argument("--runs", type=int, default=5)
     args = ap.parse_args()
 

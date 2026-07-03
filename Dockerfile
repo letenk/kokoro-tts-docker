@@ -25,6 +25,6 @@ COPY app.py ./app.py
 COPY entrypoint.sh ./entrypoint.sh
 RUN chmod +x ./entrypoint.sh
 
-EXPOSE 8180
+EXPOSE 8179
 
 ENTRYPOINT ["./entrypoint.sh"]

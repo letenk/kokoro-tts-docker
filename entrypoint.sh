@@ -5,7 +5,7 @@ MODEL_DIR="${KOKORO_MODEL_DIR:-./models}"
 MODEL_FILE="${KOKORO_MODEL_FILE:-kokoro-v1.0.fp16.onnx}"
 VOICES_FILE="${KOKORO_VOICES_FILE:-voices-v1.0.bin}"
 HOST="${KOKORO_HOST:-0.0.0.0}"
-PORT="${KOKORO_PORT:-8180}"
+PORT="${KOKORO_PORT:-8179}"
 THREADS="${KOKORO_THREADS:-4}"
 
 # Cap the ONNX Runtime / OpenMP thread pool to the box's core count.
